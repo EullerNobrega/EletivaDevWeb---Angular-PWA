@@ -1,0 +1,20 @@
+<table class="table">
+  <thead class="thead-dark">
+    <tr>
+      <th scope="col">Professor</th>
+      <th scope="col">Código</th>
+      <th scope="col">Descrição</th>
+      <th scope="col">Créditos</th>
+    </tr>
+  </thead>
+
+  <tbody *ngFor="let disciplina of (professor.disciplinas | async)">
+    <tr>
+      <th scope="row">*</th>
+      <td>{{ professor.nome }}</td>
+      <td>{{ professor.disciplina.codigo }}</td>
+      <td>{{ professor.disciplina.descricao }}</td>
+      <td>{{ professor.disciplina.qtdCreditos }}</td>
+    </tr>
+  </tbody>
+</table>

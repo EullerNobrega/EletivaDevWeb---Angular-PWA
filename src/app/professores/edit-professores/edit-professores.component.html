@@ -1,0 +1,52 @@
+<h2>Professores Cadastro</h2>
+
+<form (ngSubmit)="onSubmit()">
+  <div class="form-group">
+    <label>Nome</label>
+    <input
+      type="text"
+      class="form-control"
+      [(ngModel)]="professor.nome"
+      name="nome"
+    />
+  </div>
+
+  <div class="form-group">
+    <label>Matricula</label>
+    <input
+      type="text"
+      class="form-control"
+      [(ngModel)]="professor.matricula"
+      name="matricula"
+    />
+  </div>
+
+  <div class="form-group">
+    <label>E-mail</label>
+    <input
+      type="email"
+      class="form-control"
+      [(ngModel)]="professor.email"
+      name="email"
+    />
+  </div>
+
+  <div class="form-group">
+    <label>Disciplinas</label>
+    <select
+    class="dropdown-disciplinas"
+      multiple
+      searchable="Search here.."
+      name="disciplinas"
+      [(ngModel)]="professor.disciplinas"
+      size="6"
+    >
+      <option value="" disabled selected>Escolha as disciplinas</option>
+      <option *ngFor="let disciplina of (disciplinas | async)">{{
+        disciplina.descricao
+      }}</option>
+    </select>
+  </div>
+
+  <button type="submit" class="btn btn-primary">Salvar</button>
+</form>

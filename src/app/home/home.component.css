@@ -1,0 +1,28 @@
+.title{
+    text-align: center;
+}
+
+.header {
+    text-align: center;
+    
+}
+
+.header > img{ 
+    width: 1082px;
+    height: 270px;
+}
+
+.menu{
+    margin-top: 3%;
+    width: 100%;
+}
+
+.btn-primary{
+    margin-top: 3%;
+    font-size: 24px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.form-group{
+    text-align: center;
+}
