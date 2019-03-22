@@ -17,7 +17,7 @@ const appRoutes: Routes = [
   { path: "editDisciplinas", component: EditDisciplinasComponent },
   { path: "listDisciplinas", component: ListDisciplinasComponent },
   { path: "listProfessores", component: ListProfessoresComponent},
-  { path: "listProfessores/:email", component: ProfessorDisciplinasComponent},
+  { path: "listProfessores/:professor.matricula", component: ProfessorDisciplinasComponent},
 
   // otherwise redirect to home
   { path: "**", redirectTo: "" }

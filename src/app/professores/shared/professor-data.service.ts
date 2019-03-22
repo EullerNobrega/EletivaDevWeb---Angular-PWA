@@ -7,7 +7,7 @@ import { Professor } from './professor';
 })
 export class ProfessorDataService {
   private professorSource = new BehaviorSubject({ professor: null, key: '' });
-  currentProfessor = this.professorSource.asObservable().subscribe();
+  currentProfessor = this.professorSource.asObservable();
 
   constructor() { }
 

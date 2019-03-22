@@ -8,10 +8,10 @@
     </tr>
   </thead>
 
-  <tbody *ngFor="let professor of (professores | async)">
-    <tr>
+  <tbody >
+    <tr *ngFor="let professor of (professores | async)">
       <th scope="row">*</th>
-      <td ><button [routerLink]="['/listProfessores', 'professor.email']"class="btn btn-secondary">{{ professor.nome }}</button></td>
+      <td ><button [routerLink]="['/listProfessores', professor.matricula]"class="btn btn-secondary">{{ professor.nome }}</button></td>
       <td>{{ professor.email }}</td>
       <td>{{ professor.matricula }}</td>
     </tr>

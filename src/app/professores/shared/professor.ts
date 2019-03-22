@@ -4,5 +4,5 @@ export class Professor {
     matricula : string = '';
     nome : string = '';
     email : string = '';
-    disciplinas: Disciplina[] = [];
+    disciplinas: Array<Disciplina> = [];
 }

@@ -10,20 +10,14 @@ import { Disciplina } from '../shared/disciplina';
   styleUrls: ['./list-disciplinas.component.css']
 })
 export class ListDisciplinasComponent implements OnInit {
-  disciplinas: Observable<any>;
+  disciplinasObs: Observable<any>;
 
   constructor(private disciplinaService: DisciplinaService, private disciplinaDataService: DisciplinaDataService) { }
 
   ngOnInit() {
-    this.disciplinas = this.disciplinaService.getAll();
-    /*(this.disciplinasObs.subscribe(res => {
-      this.disciplinas = res;
-    });*/
+    this.disciplinasObs = this.disciplinaService.getAll();
+   
 
-    /*this.disciplinasObs.subscribe(res => this.disciplinas = res);
-    this.disciplinasObs.subscribe(function t(res){
-      
-    });*/
   }
 
   delete(key: string){

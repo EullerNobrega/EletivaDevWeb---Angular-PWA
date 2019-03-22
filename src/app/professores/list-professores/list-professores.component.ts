@@ -11,8 +11,6 @@ import { Observable } from "rxjs";
 })
 export class ListProfessoresComponent implements OnInit {
   professores: Observable<any>;
-  professor: Professor;
-  listPro: Array<Professor>;
 
   constructor(
     private professorService: ProfessorService,
@@ -21,16 +19,6 @@ export class ListProfessoresComponent implements OnInit {
 
   ngOnInit() {
     this.professores = this.professorService.getAll();
-    this.professores.subscribe(data => {
-      console.log(data);
-      this.listPro = data;
-      for (let p of this.listPro) {
-        console.log(p);
-        if (p.email == data['professor.email']) {
-          this.professor = p;
-        }
-      }
-    });
   }
 
   delete(key: string) {

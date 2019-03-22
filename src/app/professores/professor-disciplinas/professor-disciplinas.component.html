@@ -2,19 +2,15 @@
   <thead class="thead-dark">
     <tr>
       <th scope="col">Professor</th>
-      <th scope="col">Código</th>
-      <th scope="col">Descrição</th>
-      <th scope="col">Créditos</th>
+      <th scope="col">Disciplina</th>
     </tr>
   </thead>
 
-  <tbody *ngFor="let disciplina of (professor.disciplinas | async)">
-    <tr>
-      <th scope="row">*</th>
+
+  <tbody >
+    <tr *ngFor="let disciplina of professor.disciplinas">
       <td>{{ professor.nome }}</td>
-      <td>{{ professor.disciplina.codigo }}</td>
-      <td>{{ professor.disciplina.descricao }}</td>
-      <td>{{ professor.disciplina.qtdCreditos }}</td>
+      <td>{{ disciplina}}</td>
     </tr>
   </tbody>
 </table>

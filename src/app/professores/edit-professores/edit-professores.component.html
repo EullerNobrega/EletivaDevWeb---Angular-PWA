@@ -42,9 +42,9 @@
       size="6"
     >
       <option value="" disabled selected>Escolha as disciplinas</option>
-      <option *ngFor="let disciplina of (disciplinas | async)">{{
-        disciplina.descricao
-      }}</option>
+      <option *ngFor="let disciplina of (disciplinas | async)">
+        {{ disciplina.descricao }} 
+      </option>
     </select>
   </div>
 

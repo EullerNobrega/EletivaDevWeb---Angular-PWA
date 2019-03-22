@@ -50,6 +50,7 @@ export class ProfessorService {
       );
   }
 
+
   delete(key: string) {
     this.db.object(`professor/${key}`).remove();
   }
