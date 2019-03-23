@@ -1,28 +1,37 @@
-.title{
-    text-align: center;
+.title {
+  text-align: center;
 }
 
 .header {
-    text-align: center;
-    
+  text-align: center;
+  width: 100%;
 }
 
-.header > img{ 
-    width: 1082px;
-    height: 270px;
+.header > img {
+  width: 100%;
+  height: 100%;
 }
 
-.menu{
-    margin-top: 3%;
-    width: 100%;
+.menu {
+  margin-top: 3%;
+  text-align: center;
+  width: 100%;
+  height: 100%;
 }
 
-.btn-primary{
-    margin-top: 3%;
-    font-size: 24px;
-    font-family: 'Times New Roman', Times, serif;
+.btn-primary {
+  margin-top: 3%;
+  font-size: 24px;
+  font-family: "Times New Roman", Times, serif;
 }
 
-.form-group{
-    text-align: center;
+.form-group {
+  text-align: center;
+  width: 100%;
+  height: 100%;
+}
+
+h1 {
+  width: 100%;
+  height: 100%;
 }

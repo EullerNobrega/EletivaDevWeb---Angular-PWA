@@ -1,16 +1,14 @@
 <table class="table">
   <thead class="thead-dark">
     <tr>
-      <th scope="col">#</th>
       <th scope="col">Nome</th>
       <th scope="col">Matrícula</th>
       <th scope="col">E-mail</th>
     </tr>
   </thead>
 
-  <tbody >
+  <tbody class="body">
     <tr *ngFor="let professor of (professores | async)">
-      <th scope="row">*</th>
       <td ><button [routerLink]="['/listProfessores', professor.matricula]"class="btn btn-secondary">{{ professor.nome }}</button></td>
       <td>{{ professor.email }}</td>
       <td>{{ professor.matricula }}</td>

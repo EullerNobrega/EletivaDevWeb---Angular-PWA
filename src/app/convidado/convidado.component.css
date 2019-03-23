@@ -1,10 +1,15 @@
 .container {
-    margin-top: 2%;
-    text-align: center;
-  }
-  
-  .btn{
-      width: 30%;
-      font-size: 250%;
-      margin-top: 3%;
-  }
+  margin-top: 2%;
+  text-align: center;
+  width: 100%;
+}
+
+.form-group {
+  width: 100%;
+}
+
+.btn {
+  width: 100%;
+  font-size: 24px;
+  margin-top: 3%;
+}

@@ -17,6 +17,7 @@ import { ConvidadoComponent } from "./convidado/convidado.component";
 import { routing } from "./app.routing";
 import { HomeComponent } from './home/home.component';
 import { ProfessorDisciplinasComponent } from './professores/professor-disciplinas/professor-disciplinas.component';
+import { ServiceWorkerModule } from '@angular/service-worker';
 
 @NgModule({
   declarations: [
@@ -35,7 +36,8 @@ import { ProfessorDisciplinasComponent } from './professores/professor-disciplin
     FormsModule,
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireDatabaseModule,
-    routing
+    routing,
+    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
   ],
   providers: [],
   bootstrap: [AppComponent]
