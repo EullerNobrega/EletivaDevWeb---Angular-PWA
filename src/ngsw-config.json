@@ -30,7 +30,7 @@
       "urls": ["https://disciplinasunicap.firebaseio.com/**"],
       "cacheConfig": {
         "strategy": "freshness",
-        "maxSize": 20,
+        "maxSize": 60,
         "maxAge": "1h",
         "timeout": "5s"
       }
