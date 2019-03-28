@@ -34,7 +34,7 @@
   <div class="form-group">
     <label>Disciplinas</label>
     <select
-    class="dropdown-disciplinas"
+      class="dropdown-disciplinas"
       multiple
       searchable="Search here.."
       name="disciplinas"
@@ -43,10 +43,11 @@
     >
       <option value="" disabled selected>Escolha as disciplinas</option>
       <option *ngFor="let disciplina of (disciplinas | async)">
-        {{ disciplina.descricao }} 
+        {{ disciplina.descricao }}
       </option>
     </select>
   </div>
 
   <button type="submit" class="btn btn-primary">Salvar</button>
+  <button routerLink="/admin" class="btn btn-light">Voltar</button>
 </form>

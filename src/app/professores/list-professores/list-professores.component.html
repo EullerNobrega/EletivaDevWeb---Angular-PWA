@@ -7,7 +7,7 @@
     </tr>
   </thead>
 
-  <tbody class="body">
+  <tbody>
     <tr *ngFor="let professor of (professores | async)">
       <td ><button [routerLink]="['/listProfessores', professor.matricula]"class="btn btn-secondary">{{ professor.nome }}</button></td>
       <td>{{ professor.email }}</td>
@@ -16,3 +16,5 @@
   </tbody>
   
 </table>
+
+<button routerLink="/convidado" class="btn btn-light">Voltar</button>
