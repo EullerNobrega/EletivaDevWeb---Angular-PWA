@@ -1,7 +1,8 @@
-.body {
-    width: 100%;
-  }
+.container{
+  width: 100%;
+}
 .btn {
     margin-left: 1%;
     margin-bottom: 2%;
+    width: 50%;
 }
