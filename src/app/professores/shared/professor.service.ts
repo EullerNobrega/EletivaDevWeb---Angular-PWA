@@ -1,8 +1,9 @@
+import { post } from "selenium-webdriver/http";
 import { Injectable } from "@angular/core";
 import { Professor } from "./professor";
 import { AngularFireDatabase } from "@angular/fire/database";
-import { map } from "rxjs/operators";
-import { Observable } from 'rxjs';
+import { Observable } from "rxjs";
+import { HttpClient } from "@angular/common/http";
 
 @Injectable({
   providedIn: "root"
@@ -10,24 +11,14 @@ import { Observable } from 'rxjs';
 export class ProfessorService {
   professores: Observable<any>;
 
-  constructor(private db: AngularFireDatabase) {}
+  constructor(private db: AngularFireDatabase, private http: HttpClient) {}
 
-  getProfessorMat(matricula: any): Professor {
-    this.professores.forEach(element => {
-      if(matricula == element.matricula){
-        console.log(element);
-      }
-    });
-    return null;
+  getProfessorMat(matricula: string): Professor {
+    return this.http.get<Professor>("localhost:8080/professores/", matricula);
   }
 
   insert(professor: Professor) {
-    this.db
-      .list("professor")
-      .push(professor)
-      .then((result: any) => {
-        console.log(result.key);
-      });
+    this.http.post("localhost:8080/professor", professor);
   }
 
   update(professor: Professor, key: string) {
@@ -40,16 +31,8 @@ export class ProfessorService {
   }
 
   getAll() {
-    return this.db
-      .list("professor")
-      .snapshotChanges()
-      .pipe(
-        map(changes => {
-          return changes.map(c => ({ key: c.payload.key, ...c.payload.val() }));
-        })
-      );
+    return this.http.get<Professor[]>("localhost:8080/professores");
   }
-
 
   delete(key: string) {
     this.db.object(`professor/${key}`).remove();

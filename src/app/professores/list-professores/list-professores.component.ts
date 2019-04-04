@@ -10,7 +10,7 @@ import { Observable } from "rxjs";
   styleUrls: ["./list-professores.component.css"]
 })
 export class ListProfessoresComponent implements OnInit {
-  professores: Observable<any>;
+  professores;
 
   constructor(
     private professorService: ProfessorService,
@@ -18,7 +18,9 @@ export class ListProfessoresComponent implements OnInit {
   ) {}
 
   ngOnInit() {
-    this.professores = this.professorService.getAll();
+     this.professorService.getAll().subscribe(res=>{
+      this.professores = res;
+    });
   }
 
   delete(key: string) {
